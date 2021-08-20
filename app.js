@@ -50,6 +50,30 @@ document.getElementById('phone-minus').addEventListener('click', function () {
     updateProduct('phone', 1219, false);
 })
 
+function cancelOrder(product) {
+    const quantity = document.getElementById(product + '-number');
+    const price = document.getElementById(product + '-total');
+    quantity.value = 0;
+    price.innerText = '0';
+    calculateTotal();
+
+}
+
+document.getElementById('mobile-cancel').addEventListener('click', function () {
+
+    cancelOrder('phone')
+
+
+
+})
+document.getElementById('case-cancel').addEventListener('click', function () {
+
+    cancelOrder('case')
+
+
+
+})
+
 
 
 
